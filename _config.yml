@@ -1,0 +1,63 @@
+# Setup
+title: Sugavanesh Murugesan
+tagline: "Backend Developer & System Architect"
+description: "Backend engineering, cybersecurity, and DevOps specialist focusing on C#, .NET, Java, Python, and cloud solutions."
+url: https://sugan0tech.github.io
+baseurl: ""
+paginate: 5
+permalink: pretty
+
+# About/contact
+author:
+  name: Sugavanesh Murugesan
+  url: https://sugan0tech.github.io
+  email: sugankpms@gmail.com
+
+# Social media
+github_username: sugan0tech
+linkedin_username: sugan0tech
+
+# Custom vars
+version: 1.1.0
+google_analytics_id: G-C130PRSWGG
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Collections
+collections:
+  projects:
+    output: true
+
+social:
+  name: Your Name
+  links:
+    - https://x.com/sugan0tech
+    - https://www.linkedin.com/in/sugan0tech
+    - https://github.com/sugan0tech
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      image: /public/logo.png

@@ -1,0 +1,31 @@
+- year: 2016
+  title: Started My Computing Journey
+  description: Began exploring Linux with Ubuntu Unity at age 14
+
+- year: 2020
+  title: Started College
+  description: Enrolled in B.E. Computer Science at Sri Krishna College of Engineering and Technology
+
+- year: 2022
+  title: First Professional Experience
+  description: Interned at RCT PVT LIMITED, working with AWS S3 and improving SEO
+
+- year: 2023
+  title: Software Development Internship
+  description: Joined FourKites as a Software Developer Intern, working with microservices using Ruby On Rails & Spring Boot
+
+- year: 2023
+  title: Open Source Contributions
+  description: Started contributing to open source projects including Wildfly Elytron, Crowdin SDKs, and Java Design Patterns
+
+- year: 2024
+  title: Graduated College
+  description: Completed B.E. in Computer Science with 8.4 CGPA
+
+- year: 2024
+  title: Built Capstone Project
+  description: Developed LifeFlow, a software assistant for Blood Banking processes using ASP.NET and React
+
+- year: 2024
+  title: Started Professional Career
+  description: Joined Presidio as an Associate Cloud Engineer, focusing on AWS and Infrastructure as Code
