@@ -1,5 +1,6 @@
 <!-- Sidebar Toggle Checkbox -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked> -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}><!-- opens only on home page -->
 
 <!-- Sidebar Container -->
 <div class="sidebar" id="sidebar">

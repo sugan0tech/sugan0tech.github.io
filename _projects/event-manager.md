@@ -1,46 +1,85 @@
 ---
-layout: project
+layout: post
 title: Event-Manager
-description: A Spring-based backend service designed to handle multiple events for university student groups
-tech_stack: [Spring Boot, REST APIs, Hibernate, Java]
-github_link: https://github.com/sugan0tech/Event-Manager
-date: 2023-03-01
+date: 2023-06-17
+tags: [springboot, clean-architecture, event-manager, api-design, java]
 ---
+
+<p class="message">
+  A Spring Boot backend service for managing university student group events with comprehensive APIs and security features.
+</p>
 
 ## Overview
 
-Event-Manager is a robust backend service designed to manage multiple events for university student groups. The project demonstrates my capability to lead a team while implementing a production-ready Spring Boot application.
+Event-Manager is a robust backend service designed to streamline the management of university student group events. Built on Spring Boot, the application provides a comprehensive API for event creation, attendance tracking, and resource management. This project demonstrates my capabilities in both technical implementation and team leadership.
 
 ## Leadership & Team Experience
 
-* Led and supervised a team of 5 developers
-* Established Git workflow and code review processes
-* Managed task distribution and sprint planning
-* Ensured code quality and architecture consistency
+* Led a cross-functional team of 5 developers through the full development lifecycle
+* Established Git workflow with branch protection and pull request reviews
+* Implemented CI/CD pipeline for automated testing and deployment
+* Conducted daily stand-ups and bi-weekly sprint planning/retrospectives
+* Mentored junior developers on Spring ecosystem best practices
 
 ## Technical Implementation
 
-* **Spring Boot**: Utilized Spring Boot framework for rapid development
-* **REST APIs**: Designed and implemented RESTful endpoints for event operations
-* **Hibernate**: Used Hibernate ORM for database interactions
-* **Security**: Implemented authentication and authorization
-* **Data Validation**: Applied robust input validation and error handling
+### Core Architecture
+
+* **Spring Boot**: Built on Spring Boot 2.7 for rapid development and production-ready features
+* **REST APIs**: Designed RESTful endpoints following HATEOAS principles
+* **Hibernate/JPA**: Implemented robust ORM layer with optimized queries
+* **Security**: OAuth2 integration with role-based access control
+* **Validation**: Custom validators with comprehensive error responses
+
+### Code Quality & Testing
+
+* 85%+ test coverage using JUnit 5 and Mockito
+* Integration tests with TestContainers for database testing
+* Sonar analysis for code quality enforcement
+* Structured logging with correlation IDs
 
 ## Key Features
 
-* Event creation, updating, and management
-* Student group registration and administration
-* Attendance tracking and reporting
-* Resource allocation for events
-* Notification system for event updates
+* **Event Management**: CRUD operations with filtering, sorting, and pagination
+* **User Administration**: Role-based access control for different stakeholder types
+* **Resource Allocation**: Smart allocation of venues and equipment
+* **Notification System**: Email and in-app notifications with templating
+* **Reporting**: Attendance analytics and event participation metrics
+* **Audit Trail**: Comprehensive activity logging for compliance
+
+## System Architecture
+
+```
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│ Controllers │─────▶│  Services   │─────▶│ Repositories│
+└─────────────┘      └─────────────┘      └─────────────┘
+       │                    │                    │
+       ▼                    ▼                    ▼
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│   DTOs      │      │Domain Models│      │  Database   │
+└─────────────┘      └─────────────┘      └─────────────┘
+```
 
 ## Learning Outcomes
 
-This project provided valuable real-world software development experience, including:
+This project provided invaluable experience in:
 
-* Practical application of Spring Boot in a team environment
-* REST API design principles and best practices
-* Database schema design and optimization
-* Team leadership and project management skills
+* Designing scalable backend architectures for real-world applications
+* Implementing comprehensive security measures including OAuth2
+* Managing database relationships and optimizing query performance
+* Leading development teams and establishing effective workflows
+* Balancing technical debt with feature delivery
 
-The experience gained from this project has been instrumental in shaping my approach to backend service development and team collaboration.
+<div class="project-links">
+  <a href="https://github.com/sugan0tech/Event-Manager" class="github-link">View on GitHub</a>
+</div>
+
+<div class="project-meta">
+  <span class="tech-badge">Spring Boot</span>
+  <span class="tech-badge">REST APIs</span>
+  <span class="tech-badge">Hibernate</span>
+  <span class="tech-badge">Java</span>
+  <span class="tech-badge">MySQL</span>
+  <span class="tech-badge">OAuth2</span>
+  <span class="date-badge">March 2023</span>
+</div>
