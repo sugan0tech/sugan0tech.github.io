@@ -1,47 +1,93 @@
 ---
 layout: project
 title: StudentWorkspace
-description: An alternative to Google Classroom built on Express and MongoDB
-tech_stack: [Express, MongoDB, Node.js, JavaScript]
-github_link: https://github.com/sugan0tech/student-workspace
-date: 2023-08-01
+date: 2022-02-14
+tags: [express, mongodb, nodejs, javascript, education-tech]
 ---
+
+<p class="message">
+  A lightweight alternative to Google Classroom built with Express and MongoDB, providing essential tools for academic assignment management, resource sharing, and student collaboration.
+</p>
 
 ## Overview
 
-StudentWorkspace is a web application designed as an alternative to Google Classroom, providing a platform for managing educational content, assignments, and student interactions. Built using Express and MongoDB, it demonstrates my capabilities in full-stack JavaScript development.
+StudentWorkspace is my first backend development project, created to address core academic management needs without the complexity of larger platforms. This application serves as a focused alternative to Google Classroom and Google Drive, specifically tailored for assignment handling, exam management, and homework tracking.
 
-## Technical Stack
+## Technical Implementation
 
-* **Backend**: Express.js on Node.js
-* **Database**: MongoDB with Mongoose ODM
-* **Authentication**: JWT-based authentication system
-* **Frontend**: EJS templates with modern CSS and JavaScript
+* **Backend**: Express.js on Node.js with MVC architecture
+* **Database**: MongoDB with Mongoose for data modeling
+* **Authentication**: JWT-based user authentication and authorization
+* **Frontend**: Server-side rendering with EJS templates
+* **Styling**: Responsive design with modern CSS
+
+## Architecture
+
+```
+┌─────────────────────────────────────────┐
+│               Client Layer              │
+│             (EJS Templates)             │
+└───────────────────┬─────────────────────┘
+                    │
+┌───────────────────▼─────────────────────┐
+│             Express Router              │
+│   ┌────────┐  ┌────────┐  ┌─────────┐   │
+│   │ Auth   │  │ Course │  │ Content │   │
+│   │ Routes │  │ Routes │  │ Routes  │   │
+│   └────────┘  └────────┘  └─────────┘   │
+└───────────────────┬─────────────────────┘
+                    │
+┌───────────────────▼─────────────────────┐
+│            Controller Layer             │
+│   ┌────────┐  ┌────────┐  ┌─────────┐   │
+│   │ User   │  │ Course │  │ Content │   │
+│   │ Logic  │  │ Logic  │  │ Logic   │   │
+│   └────────┘  └────────┘  └─────────┘   │
+└───────────────────┬─────────────────────┘
+                    │
+┌───────────────────▼─────────────────────┐
+│              Model Layer                │
+│   ┌────────┐  ┌────────┐  ┌─────────┐   │
+│   │ User   │  │ Course │  │ Content │   │
+│   │ Schema │  │ Schema │  │ Schema  │   │
+│   └────────┘  └────────┘  └─────────┘   │
+└───────────────────┬─────────────────────┘
+                    │
+┌───────────────────▼─────────────────────┐
+│              MongoDB                    │
+└─────────────────────────────────────────┘
+```
 
 ## Key Features
 
-* Course creation and management
-* Assignment distribution and submission
-* Resource sharing and organization
-* Discussion forums for each course
-* Grading and feedback system
-* Student progress tracking
+* **Course Management**: Create and organize academic courses
+* **Assignment System**: Distribute, collect, and grade assignments
+* **Resource Library**: Share educational materials and resources
+* **Discussion Board**: Enable student-teacher communication
+* **File Handling**: Upload and manage academic documents
+* **User Management**: Different roles for students and educators
 
-## Implementation Details
+## Development Focus
 
-* **RESTful API**: Designed a comprehensive API for all platform operations
-* **Data Modeling**: Created efficient MongoDB schemas with Mongoose
-* **Authentication Flow**: Implemented secure authentication and authorization
-* **File Handling**: Integrated file upload and management capabilities
-* **Responsive Design**: Ensured responsive UI for various device sizes
+As my first backend project, StudentWorkspace helped me develop skills in:
 
-## Learning Outcomes
+* Building RESTful APIs with Express
+* Designing NoSQL database schemas
+* Implementing secure user authentication
+* Server-side rendering with templating engines
+* Creating intuitive educational interfaces
 
-This project enhanced my skills in:
+This project served as my foundation in backend development, emphasizing practical application architecture, data modeling, and user-focused design in an educational technology context.
 
-* MERN stack development (minus React in this case)
-* NoSQL database design and optimization
-* Building secure user authentication systems
-* Creating intuitive educational technology interfaces
+<div class="project-links">
+  <a href="https://github.com/sugan0tech/student-workspace" class="github-link">View on GitHub</a>
+</div>
 
-StudentWorkspace represents my ability to build complex, full-featured web applications that solve real-world problems in the educational technology space.
+<div class="project-meta">
+  <span class="tech-badge">Express</span>
+  <span class="tech-badge">MongoDB</span>
+  <span class="tech-badge">Node.js</span>
+  <span class="tech-badge">JavaScript</span>
+  <span class="tech-badge">EJS</span>
+  <span class="date-badge">August 2023</span>
+</div>

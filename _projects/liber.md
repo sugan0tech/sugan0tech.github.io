@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: project
 title: LibER
 description: first java project with properly following all the design principals
+date: 2022-10-10
 ---
 
 <p class="message">

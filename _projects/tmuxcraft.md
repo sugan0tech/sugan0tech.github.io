@@ -1,116 +1,85 @@
 ---
 layout: project
 title: TmuxCraft
-description: A Tmuxifier alternative written in Go for streamlined Tmux session management
-tech_stack: [Go, CLI, Tmux]
+date: 2024-10-01
+description: A modern Go-based alternative to tmuxifier with YAML configuration and cross-platform support
 github_link: https://github.com/sugan0tech/tmuxcraft
-date: 2024-06-01
+tags: [go, cli, tmux, terminal-tools, open-source]
 ---
 
 <p class="message">
-  A powerful Go-based CLI tool for creating, saving, and restoring complex Tmux environments with intuitive commands and efficient state management.
+  A modern Go-based CLI tool that replaces tmuxifier with enhanced session templating, YAML configuration, and cross-platform support for terminal power users.
 </p>
 
 ## Overview
 
-TmuxCraft is a Go-based command-line tool that simplifies and enhances Tmux session management. Created as an alternative to Tmuxifier, it provides a more streamlined approach to creating, saving, and restoring complex Tmux environments. The tool is designed for developers who rely heavily on terminal-based workflows and need efficient ways to manage multiple projects.
+TmuxCraft is an open-source command-line tool that modernizes Tmux session management. Born from my experience as a long-time tmuxifier user, I created this alternative to address maintenance issues and outdated APIs in the original tool, while adding powerful new features for developers who rely on terminal-based workflows.
 
-## Motivation
+## Technical Implementation
 
-As a developer who works extensively with terminal-based workflows, I wanted a more efficient way to manage my Tmux sessions with:
-* Faster session creation and restoration
-* Better configuration file syntax with modern YAML support
-* More intuitive command structure following CLI best practices
-* Cross-platform compatibility across Linux, macOS, and WSL environments
+* **Go Language**: Built entirely in Go for performance and cross-platform compatibility
+* **YAML Configuration**: Human-readable session definitions replacing outdated formats
+* **Cobra CLI Framework**: Structured command hierarchy with intuitive UX
+* **Cross-Platform**: Supports Linux, macOS (Intel/ARM), and Windows
 
-## Implementation Details
-
-### Core Technology
-
-* **Pure Go Implementation**: Written entirely in Go for performance and portability
-* **YAML Configuration**: Human-readable YAML format for session definitions
-* **Cobra CLI Framework**: Structured command hierarchy with proper subcommand support
-* **State Management**: Efficient storage and retrieval of session configurations
-
-### Architecture
+## Architecture
 
 ```
 ┌───────────────────┐        ┌───────────────────┐
-│                   │        │                   │
 │    CLI Interface  │◄──────▶│  Command Handlers │
-│                   │        │                   │
 └───────────┬───────┘        └─────────┬─────────┘
             │                          │
             ▼                          ▼
 ┌───────────────────┐        ┌───────────────────┐
-│                   │        │                   │
 │ Session Templates │◄──────▶│   Tmux Manager    │
-│                   │        │                   │
 └───────────┬───────┘        └─────────┬─────────┘
             │                          │
             ▼                          ▼
 ┌───────────────────┐        ┌───────────────────┐
-│                   │        │                   │
 │  Configuration    │        │  System Process   │
 │  Manager          │        │  Interface        │
-│                   │        │                   │
 └───────────────────┘        └───────────────────┘
 ```
 
 ## Key Features
 
-### Session Management
+* **Template-Based Sessions**: Define complex layouts once, use them anywhere
+* **Script Generation**: Export session configurations to shell scripts
+* **Multi-Pane Management**: Create sophisticated window and pane arrangements
+* **Project Presets**: Ready-made configurations for different development environments
+* **Automatic Shell Completion**: Built-in completions for Bash, Zsh, and Fish
 
-* **Template-Based Creation**: Define session layouts once, use them anywhere
-* **Project Presets**: Automatically configure sessions based on project type (Go, Node.js, Python, etc.)
-* **Command Completion**: Built-in completions for Bash, Zsh, and Fish shells
-* **Persistent Storage**: Automatically save session state for quick restoration
+## Sample Configuration
 
-### Developer Experience
+```yaml
+session_name: dev
+path: ~/projects/current
+windows:
+  - name: editor
+    command: nvim
+    panes:
+      - command: tty-clock -t
+        split: h
+        size: 20
+      - command: bash
+        size: 50
+        split: v
+  - name: server
+    command: npm run dev
+  - name: git
+    command: lazygit
+```
 
-* **Layout Preview**: Visualize session layouts before creation
-* **Session Sharing**: Export and share configurations with team members
-* **Smart Defaults**: Intelligent path handling and environment detection
-* **Minimal Dependencies**: Single binary installation with no external requirements
+## Development Focus
 
-### Advanced Capabilities
+As the project creator and maintainer, I've focused on:
 
-* **Hook System**: Pre/post session events for custom scripting
-* **Layout Inheritance**: Build complex layouts from simpler templates
-* **Remote Support**: Create and control sessions on remote hosts
-* **Auto-Restoration**: Automatically restore sessions after system reboots
+* Building a robust CLI experience following modern best practices
+* Ensuring compatibility across all major platforms including ARM processors
+* Creating an intuitive configuration format that's easy to read and modify
+* Implementing automated CI/CD with GitHub Actions for multi-platform builds
 
-## Technical Challenges
-
-### Tmux Interaction
-
-* Implementing proper signal handling for Tmux interactions
-* Parsing and generating valid Tmux commands across different versions
-* Handling edge cases in window and pane management
-
-### Cross-Platform Considerations
-
-* Ensuring consistent behavior across different operating systems
-* Managing path differences between platforms
-* Handling terminal capabilities and color support
-
-### User Experience
-
-* Creating an intuitive and user-friendly command structure
-* Balancing flexibility with simplicity in configuration options
-* Providing helpful error messages and debugging information
-
-## Learning Outcomes
-
-This project enhanced my skills in:
-
-* Building robust command-line applications in Go
-* Designing intuitive developer tools with strong UX focus
-* Working with system processes and terminal interactions
-* Implementing effective configuration management systems
-* Creating documentation that balances completeness with usability
-
-TmuxCraft showcases my abilities in Go development and CLI tool design, while also demonstrating my focus on developer experience and workflow optimization for terminal-centric environments.
+Currently in alpha phase 4, TmuxCraft demonstrates my ability to identify gaps in existing tools and create elegant, cross-platform solutions using Go's strengths in system programming and CLI development.
 
 <div class="project-links">
   <a href="https://github.com/sugan0tech/tmuxcraft" class="github-link">View on GitHub</a>
@@ -122,5 +91,5 @@ TmuxCraft showcases my abilities in Go development and CLI tool design, while al
   <span class="tech-badge">Tmux</span>
   <span class="tech-badge">YAML</span>
   <span class="tech-badge">Cobra</span>
-  <span class="date-badge">June 2024</span>
+  <span class="date-badge">October 2024</span>
 </div>
