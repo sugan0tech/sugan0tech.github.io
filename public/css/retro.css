@@ -191,3 +191,130 @@ pre, code {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* Enhanced retro sidebar styling */
+.sidebar {
+  background-color: #8B5A2B; /* Your main brown color */
+  font-family: "Courier New", Courier, monospace;
+  border-right: 4px solid #5e3c1c; /* Darker brown border */
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Sidebar header/title area */
+.sidebar-item:first-child {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background-color: #7c4f26; /* Slightly darker than main color */
+  border-bottom: 3px solid #5e3c1c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-item {
+  padding: 1rem;
+  color: #f8f8e0; /* Light cream color for text */
+}
+
+/* Navigation container */
+.sidebar-nav {
+  border-top: 2px dashed #a06c3b; /* Lighter brown dashed line */
+}
+
+/* Individual nav items */
+.sidebar-nav-item {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  border-bottom: 2px dashed #a06c3b; /* Light brown dashed border */
+  color: #f8f8e0; /* Light cream text */
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #a06c3b; /* Lighter brown */
+  color: white;
+  padding-left: 2rem; /* Slide effect on hover */
+  box-shadow: inset 0 0 8px #5e3c1c; /* Inner shadow */
+  text-decoration: none;
+}
+
+.sidebar-nav-item.active {
+  background-color: #5e3c1c; /* Darker brown background */
+  color: #f8f8e0;
+  font-weight: bold;
+  border-left: 5px solid #e0c8a0; /* Light tan accent border */
+  box-shadow: inset 0 0 12px #3b2412; /* Deeper inner shadow */
+}
+
+/* Footer in sidebar */
+.sidebar .sidebar-item:last-child {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  border-top: 2px dashed #a06c3b;
+  color: #e0c8a0; /* Light tan */
+}
+
+/* Sidebar toggle button - appears on mobile */
+.sidebar-toggle {
+  background-color: #8B5A2B;
+  border: 3px solid #5e3c1c;
+  box-shadow: 2px 2px 0 #3b2412;
+  color: #f8f8e0;
+}
+
+.sidebar-toggle:before {
+  background-image: linear-gradient(
+    to bottom,
+    #f8f8e0, #f8f8e0 20%,
+    #8B5A2B 20%, #8B5A2B 40%,
+    #f8f8e0 40%, #f8f8e0 60%,
+    #8B5A2B 60%, #8B5A2B 80%,
+    #f8f8e0 80%, #f8f8e0 100%
+  );
+}
+
+.sidebar-toggle:active,
+.sidebar-toggle:focus,
+.sidebar-toggle:hover {
+  background-color: #a06c3b; /* Lighter brown */
+  box-shadow: 1px 1px 0 #3b2412;
+  transform: translate(1px, 1px); /* Button press effect */
+}
+
+/* Ensure sidebar links don't have the dotted bottom border */
+.sidebar a {
+  border-bottom: none;
+  transition: all 0.3s ease;
+}
+
+/* Version number styling (for your "Currently v1.1.0" text) */
+.sidebar-nav-item:contains("Currently") {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.8rem;
+  color: #e0c8a0; /* Light tan */
+  background-color: #5e3c1c; /* Darker brown */
+  border: 1px solid #a06c3b;
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0;
+  box-shadow: inset 0 0 8px #3b2412;
+  letter-spacing: 1px;
+}
+
+/* For "wrap-sidebar" layout */
+.wrap .sidebar-toggle {
+  background-color: white;
+  border: 2px solid #8B5A2B;
+}
+
+/* When sidebar is visible */
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: transparent;
+}
