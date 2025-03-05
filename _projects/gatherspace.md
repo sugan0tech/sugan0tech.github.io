@@ -3,7 +3,7 @@ layout: project
 title: GatherSpace
 description: A virtual collaborative workspace with proximity-based communication built using Spring Boot and React
 tech_stack: [Spring Boot, React, WebRTC, MongoDB, MySql]
-github_link: https://github.com/sugan0tech/gatherspace
+github_link: https://github.com/GatherSpace
 date: 2025-01-01
 ---
 
