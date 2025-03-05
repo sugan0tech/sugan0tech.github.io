@@ -1,0 +1,193 @@
+/* Retro styling for Lanyon theme with brown color scheme */
+
+/* General retro feel */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f8f8e0; /* Slightly warmer background */
+}
+
+/* Wider container */
+.container {
+  max-width: 55rem; /* Increased from 28rem for better desktop utilization */
+}
+
+/* Apply responsive width for different screen sizes */
+@media (min-width: 38em) {
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 56em) {
+  .container {
+    max-width: 55rem;
+  }
+}
+
+/* Retro borders for content */
+.post, .page, .project {
+  border: 2px solid #8B5A2B; /* Using your brown color */
+  border-radius: 0;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 #8B5A2B;
+}
+
+/* Header styling */
+.masthead {
+  border-bottom: 2px solid #8B5A2B;
+  margin-bottom: 2rem;
+}
+
+/* Link styling */
+a {
+  color: #8B5A2B; /* Changed from magenta to your brown */
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  color: #a06c3b; /* Lighter brown for hover */
+}
+
+/* Code blocks with retro terminal feel */
+pre, code {
+  background-color: #3b2412; /* Darker brown background */
+  color: #e0c8a0; /* Light tan text color */
+  border-radius: 0;
+  border: 1px solid #8B5A2B;
+}
+
+/* Enhanced sidebar retro styling */
+.sidebar {
+  background-color: #8B5A2B; /* Your brown color */
+  border-right: 3px solid #5e3c1c; /* Darker brown border */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.sidebar-item {
+  padding: 1rem;
+  border-bottom: 2px dashed #a06c3b; /* Lighter brown */
+  color: #fff; /* White text for contrast */
+}
+
+.sidebar-nav {
+  border-top: 2px dashed #a06c3b;
+}
+
+.sidebar-nav-item {
+  border-bottom: 1px dashed #a06c3b;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #a06c3b; /* Lighter brown */
+  box-shadow: inset 0 0 5px #5e3c1c; /* Darker brown */
+  color: #fff;
+}
+
+.sidebar-nav-item.active {
+  background-color: #5e3c1c; /* Darker brown */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: inset 0 0 8px #3b2412; /* Even darker brown */
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+  background-color: #8B5A2B;
+  border: 2px solid #5e3c1c;
+}
+
+.sidebar-toggle:active,
+.sidebar-toggle:focus,
+.sidebar-toggle:hover {
+  background-color: #a06c3b; /* Lighter brown */
+}
+
+/* Pagination with border */
+.pagination {
+  border: 2px solid #8B5A2B;
+  background-color: #fff;
+}
+
+/* Blog posts specific styling */
+.posts .post {
+  border: 2px solid #8B5A2B;
+  border-radius: 0;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 #8B5A2B;
+}
+
+/* Projects specific styling */
+.projects .project {
+  border: 3px solid #8B5A2B;
+  border-radius: 0;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #f5f5f0; /* Slightly warm background */
+  box-shadow: 6px 6px 0 #8B5A2B;
+}
+
+/* Project subsections */
+.project-section, 
+.project-item,
+.project-entry,
+.project-description {
+  border: 1px solid #8B5A2B;
+  border-radius: 0;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f9f5e8; /* Warm off-white */
+  box-shadow: 3px 3px 0 #a06c3b; /* Lighter brown */
+}
+
+/* Project titles */
+.project-title, 
+.project h2, 
+.project h3 {
+  border-bottom: 2px dotted #8B5A2B;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: bold;
+  color: #5e3c1c; /* Darker brown */
+}
+
+/* Project links */
+.project a {
+  color: #8B5A2B;
+  font-weight: bold;
+}
+
+/* Project tags or metadata */
+.project-meta, 
+.project-date, 
+.project-tags {
+  font-size: 0.85rem;
+  color: #5e3c1c; /* Darker brown */
+  background-color: #e0d8c0; /* Light tan */
+  padding: 0.2rem 0.5rem;
+  border: 1px dashed #8B5A2B;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Content wrapper padding adjustment */
+.content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Optional: readable width for paragraphs even in wider container */
+.post-content p, 
+.project-content p {
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+}
