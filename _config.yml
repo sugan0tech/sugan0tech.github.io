@@ -2,7 +2,7 @@
 title: Sugavanesh Murugesan
 tagline: "Backend Developer & System Architect"
 description: "Backend engineering, cybersecurity, and DevOps specialist focusing on C#, .NET, Java, Python, and cloud solutions."
-url: https://sugan0tech.github.io
+url: https://sugan.dev
 baseurl: ""
 paginate: 5
 permalink: pretty
@@ -10,7 +10,7 @@ permalink: pretty
 # About/contact
 author:
   name: Sugavanesh Murugesan
-  url: https://sugan0tech.github.io
+  url: https://sugan.dev
   email: sugankpms@gmail.com
 
 # Social media
