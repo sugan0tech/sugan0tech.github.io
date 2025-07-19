@@ -78,49 +78,54 @@ title: Home
 
 <style>
 .profile-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 20px;
+ float: right;
+ margin-left: 20px;
+ margin-bottom: 20px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ccc;
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ object-fit: cover;
+ /* Dark Mode Change */
+ border: 3px solid var(--border-color);
 }
 
 .skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 20px;
 }
 
 .skill-tag {
-  background-color: #f0f0f0;
-  padding: 5px 10px;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  border-radius: 3px;
-  font-size: 0.9em;
+ /* Dark Mode Change */
+ background-color: #333;
+ color: var(--off-white);
+ padding: 5px 10px;
+ margin-right: 8px;
+ margin-bottom: 8px;
+ border-radius: 3px;
+ font-size: 0.9em;
 }
 
 .cv-link {
-  margin-top: 30px;
+ margin-top: 30px;
 }
 
 .cv-link a {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #4078c0;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
+ display: inline-block;
+ padding: 8px 16px;
+ /* Dark Mode Change */
+ background-color: var(--engineering-orange);
+ color: var(--white);
+ text-decoration: none;
+ border-radius: 4px;
+ font-weight: bold;
 }
 
 .cv-link a:hover {
-  background-color: #3567a8;
+ /* Dark Mode Change */
+ background-color: var(--blood-red);
 }
 </style>
