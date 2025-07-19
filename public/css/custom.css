@@ -2,35 +2,25 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  background-color: #100D0B;
+  color: #eee;
 }
 
 /* Sidebar styles */
 .sidebar {
-  background-color: #202020;
+  background-color: #3C0D0B; /* Black Bean */
 }
 
 .sidebar-name {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0;
-  color: #fff;
+  color: #BF231B; /* Engineering Orange */
 }
 
-.sidebar-title {
-  font-size: 0.9rem;
-  margin-top: 0;
-  color: #ccc;
-}
-
+.sidebar-title,
 .sidebar-nav-heading {
-  display: block;
-  padding: 0.5rem 1rem;
-  font-size: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ccc;
-  letter-spacing: 1px;
-  margin-top: 1rem;
+  color: #BF231B; /* Engineering Orange */
 }
 
 .sidebar-nav-item {
@@ -40,317 +30,104 @@ body {
 .sidebar-nav-item:hover,
 .sidebar-nav-item:focus {
   color: #fff;
-  background-color: #333;
+  background-color: #611711; /* Blood Red */
 }
 
 .sidebar-nav-item.active {
   color: #fff;
-  background-color: #444;
+  background-color: #000000; /* Black */
 }
 
 /* Timeline styles */
-.timeline-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline-intro {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding: 0;
+.timeline-intro,
+.timeline-description,
+.timeline-title {
+  color: #ccc;
 }
 
 .timeline:before {
-  content: '';
-  position: absolute;
-  left: 1rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #ccc;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 3rem;
+  background: #BF231B; /* Engineering Orange */
 }
 
 .timeline-year {
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  background: #fff;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  transform: translateX(-50%);
-}
-
-.timeline-title {
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.timeline-description {
-  margin-top: 0;
-  color: #555;
+  background: #100D0B; /* Smoky Black */
+  border: 1px solid #611711;
+  color: #BF231B;
 }
 
 /* Project styles */
-.projects-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.projects-intro {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.projects-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .projects-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.projects-intro,
+.project-description,
+.tech-tag,
+.skill-tag,
+.category-tag,
+.read-more {
+  color: #ccc;
 }
 
 .project-card {
-  border: 1px solid #eee;
-  border-radius: 5px;
-  padding: 1.5rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #3C0D0B;
+  background: #100D0B;
+  color: #eee;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.project-title {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.project-description {
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.project-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag, .skill-tag, .category-tag {
-  display: inline-block;
-  background: #f5f5f5;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  color: #555;
-  transition: background 0.2s;
-}
-
-.tech-tag:hover, .skill-tag:hover {
-  background: #e0e0e0;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(191, 35, 27, 0.3); /* Orange tint */
 }
 
 .github-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  background: #333;
+  background: #BF231B;
   color: #fff;
-  border-radius: 3px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.2s;
 }
 
 .github-link:hover {
-  background: #555;
-  text-decoration: none;
-}
-
-.icon-text {
-  margin-left: 0.25rem;
+  background: #611711;
 }
 
 /* Blog styles */
-.blog-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.blog-intro {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.post-preview {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-}
-
-.post-title {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.blog-intro,
+.post-excerpt {
+  color: #ccc;
 }
 
 .post-meta {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
   color: #999;
-  font-size: 0.9rem;
-}
-
-.post-date {
-  margin-right: 1rem;
-}
-
-.post-categories {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.post-excerpt {
-  color: #555;
 }
 
 .read-more {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
+  color: #BF231B;
 }
 
 .read-more:hover {
   text-decoration: underline;
 }
 
-.no-posts {
-  text-align: center;
-  color: #999;
-  font-style: italic;
-  margin: 3rem 0;
-}
-
-/* Home page styles */
-.introduction {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.page-title {
-  margin-bottom: 0;
-}
-
+/* Home */
 .tagline {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  color: #777;
-  font-weight: normal;
-}
-
-.profile-section {
-  margin-bottom: 2.5rem;
+  color: #BF231B;
 }
 
 .profile-section h2 {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-}
-
-.skill-category {
-  margin-bottom: 1.5rem;
-}
-
-.skill-category h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
+  border-bottom: 1px solid #611711;
 }
 
 .social-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #f5f5f5;
-  border-radius: 3px;
-  text-decoration: none;
-  color: #333;
-  transition: background 0.2s;
+  background: #3C0D0B;
+  color: #fff;
 }
 
 .social-link:hover {
-  background: #e0e0e0;
-  text-decoration: none;
+  background: #BF231B;
 }
 
-/* Project detail page */
-.project {
-  max-width: 800px;
-  margin: 0 auto;
+/* Optional: add transitions for better UX */
+a,
+.sidebar-nav-item,
+.project-card,
+.github-link,
+.read-more,
+.tech-tag,
+.skill-tag {
+  transition: all 0.2s ease-in-out;
 }
 
-.project-title {
-  margin-bottom: 0.5rem;
-}
-
-.project h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.project ul {
-  padding-left: 1.5rem;
-}
-
-.project ul li {
-  margin-bottom: 0.5rem;
-}
