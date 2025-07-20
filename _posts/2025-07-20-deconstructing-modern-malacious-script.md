@@ -4,7 +4,7 @@ title: "Anatomy of a macOS Attack: Deconstructing a Malicious Shell Script"
 date: 2025-07-20
 tags: [security, macos, bash, devops, malware, incident]
 description: "A chilling breakdown of a sophisticated macOS shell script attack, revealing how easily trust can be exploited for total system compromise. Learn to deconstruct and defend against similar threats."
-image: "/assets/images/blog200725.png" # Path to the specific image for this blog post
+image: "/public/images/blog200725.png" # Path to the specific image for this blog post
 og_type: "article" # Explicitly set for blog posts
 ---
 
