@@ -54,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 /* General Link Styling for Dark Mode */
 a {
   color: var(--engineering-orange);
+  text-decoration: underline;
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -163,6 +164,7 @@ a:hover, a:focus {
 .sidebar a {
   font-weight: normal;
   color: var(--white);
+  text-decoration: none;
 }
 .sidebar-item {
   padding: 1rem;
