@@ -11,7 +11,7 @@ I am a Backend Developer specializing in robust, secure, and scalable systems. W
 ## Work Experience
 
 **PRESIDIO, Chennai, India**  
-**Associate Cloud Engineer** (Sep 2024 - Present)
+**Software Engineer** (Sep 2024 - Present)
 * Working exclusively with AWS cloud infrastructure and IaC tools to architect robust solutions for microservices and data-intensive applications
 * Implementing migration strategies using AWS MGN for enterprise workloads
 * Contributing to application development with ASP.NET Core and React for client-facing projects
@@ -32,6 +32,9 @@ I am a Backend Developer specializing in robust, secure, and scalable systems. W
 * Learned: Resource-efficient content delivery, CDN optimization techniques, AWS cost management
 
 ## Open Source Contributions
+
+**OpenMigrate** (CoCreator and Maintainer)
+* An opensource suite for migration can do server discovery and multi cloud migration.
 
 **TmuxCraft** (Creator and Maintainer)
 * Built a Go-based alternative to tmuxifier with enhanced session templating and YAML configuration
@@ -63,7 +66,7 @@ Throughout my projects, I've demonstrated this philosophy by implementing bit-ma
 
 ## Contact
 
-- **Email**: sugankpms@gmail.com
+- **Email**: mail@sugan.dev
 - **GitHub**: [sugan0tech](https://github.com/sugan0tech)
 - **LinkedIn**: [sugan0tech](https://linkedin.com/in/sugan0tech)
 
