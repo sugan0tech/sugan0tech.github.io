@@ -1,11 +1,17 @@
+# _config.yml
+
 # Setup
-title: Sugavanesh Murugesan
+title: "Sugavanesh Murugesan aka: sugan0tech"
 tagline: "Backend Craftsman & System Designer"
 description: "Backend Architect and Real-Time Systems Engineer with deep expertise in Java, C#, .NET, and Python, specializing in building scalable backend systems, real-time infrastructure, and distributed architectures."
 url: https://sugan.dev
 baseurl: ""
 paginate: 5
 permalink: pretty
+
+# Site-wide default image for SEO/OG (jekyll-seo-tag will use this if no page-specific image)
+image: "/public/ss.png" # <--- IMPORTANT: Rename 'default_og_image' to 'image' for jekyll-seo-tag
+og_type: "website" # jekyll-seo-tag will use this for the default type
 
 # About/contact
 author:
@@ -16,6 +22,7 @@ author:
 # Social media
 github_username: sugan0tech
 linkedin_username: sugan0tech
+twitter_username: sugan0tech # Add your Twitter username here for Twitter cards
 
 # Custom vars
 version: 1.1.0
@@ -51,6 +58,10 @@ defaults:
     values:
       layout: "post"
       comments: false
+      # For blog posts, you'll specify specific OG values in their own Front Matter
+      # But you can set a default image for all posts here if you wish
+      # image: /assets/images/default-blog-post-image.png # Example if you want a different default for posts
+      og_type: "article" # Good default for all posts
   - scope:
       path: ""
       type: "projects"
@@ -60,4 +71,7 @@ defaults:
       path: ""
     values:
       layout: "default"
-      image: /public/logo.png
+      # Global default image is now at the top-level 'image'
+      # Remove the 'image: /public/logo.png' from here if you want it handled globally by the top-level 'image'
+      # Unless '/public/logo.png' is truly a different default for *all* pages/collections not explicitly covered
+      # If your 'image: /public/ss.png' at the top is the general site default, this one can be removed or carefully managed.

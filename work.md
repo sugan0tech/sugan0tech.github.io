@@ -66,7 +66,7 @@ Throughout my projects, I've demonstrated this philosophy by implementing bit-ma
 
 ## Contact
 
-- **Email**: mail@sugan.dev
+- **Email**: [mail@sugan.dev](mailto:mail@sugan.dev)
 - **GitHub**: [sugan0tech](https://github.com/sugan0tech)
 - **LinkedIn**: [sugan0tech](https://linkedin.com/in/sugan0tech)
 

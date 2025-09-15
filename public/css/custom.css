@@ -1,133 +1,439 @@
-/* Base styles */
+/*
+ * Contents
+ *
+ * Global resets
+ * Masthead
+ * Sidebar
+ * Slide effect
+ * Posts and pages
+ * Pagination
+ * Reverse layout
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+:root {
+  --black-bean:         #3C0D0B;
+  --engineering-orange: #FF8C00; /* High-contrast red for links and accents */
+  --blood-red:          #611711;
+  --black:              #000000;
+  --smoky-black:        #100D0B;
+  --off-white:          #f1f1f1;
+  --white:              #ffffff;
+  --subtle-gray:        #9e9e9e;
+  --border-color:       rgba(255, 255, 255, 0.15);
+}
+
+
+/* Prevent scroll on narrow devices */
+html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #100D0B;
-  color: #eee;
+  overflow-x: hidden;
+  /* Dark Mode Change */
+  background-color: var(--smoky-black);
+  color: var(--off-white);
 }
 
-/* Sidebar styles */
-.sidebar {
-  background-color: #3C0D0B; /* Black Bean */
+html {
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
-.sidebar-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 0;
-  color: #BF231B; /* Engineering Orange */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700; /* Increased for contrast */
+  /* Dark Mode Change */
+  color: var(--white);
+  letter-spacing: -.025rem;
 }
 
-.sidebar-title,
-.sidebar-nav-heading {
-  color: #BF231B; /* Engineering Orange */
-}
-
-.sidebar-nav-item {
-  color: #ddd;
-}
-
-.sidebar-nav-item:hover,
-.sidebar-nav-item:focus {
-  color: #fff;
-  background-color: #611711; /* Blood Red */
-}
-
-.sidebar-nav-item.active {
-  color: #fff;
-  background-color: #000000; /* Black */
-}
-
-/* Timeline styles */
-.timeline-intro,
-.timeline-description,
-.timeline-title {
-  color: #ccc;
-}
-
-.timeline:before {
-  background: #BF231B; /* Engineering Orange */
-}
-
-.timeline-year {
-  background: #100D0B; /* Smoky Black */
-  border: 1px solid #611711;
-  color: #BF231B;
-}
-
-/* Project styles */
-.projects-intro,
-.project-description,
-.tech-tag,
-.skill-tag,
-.category-tag,
-.read-more {
-  color: #ccc;
-}
-
-.project-card {
-  border: 1px solid #3C0D0B;
-  background: #100D0B;
-  color: #eee;
-}
-
-.project-card:hover {
-  box-shadow: 0 10px 20px rgba(191, 35, 27, 0.3); /* Orange tint */
-}
-
-.github-link {
-  background: #BF231B;
-  color: #fff;
-}
-
-.github-link:hover {
-  background: #611711;
-}
-
-/* Blog styles */
-.blog-intro,
-.post-excerpt {
-  color: #ccc;
-}
-
-.post-meta {
-  color: #999;
-}
-
-.read-more {
-  color: #BF231B;
-}
-
-.read-more:hover {
+/* General Link Styling for Dark Mode */
+a {
+  color: var(--engineering-orange);
   text-decoration: underline;
 }
-
-/* Home */
-.tagline {
-  color: #BF231B;
+a:hover, a:focus {
+  text-decoration: none;
 }
 
-.profile-section h2 {
-  border-bottom: 1px solid #611711;
+
+/*
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled.
+ */
+
+.wrap {
+  position: relative;
+  width: 100%;
 }
 
-.social-link {
-  background: #3C0D0B;
-  color: #fff;
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
 }
 
-.social-link:hover {
-  background: #BF231B;
+
+/*
+ * Masthead
+ *
+ * Super small header above the content for site name and short description.
+ */
+
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  /* Dark Mode Change */
+  border-bottom: 1px solid var(--border-color);
+}
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--white);
+}
+.masthead-title a {
+  color: var(--white);
+}
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: var(--subtle-gray);
+  letter-spacing: 0;
 }
 
-/* Optional: add transitions for better UX */
-a,
-.sidebar-nav-item,
-.project-card,
-.github-link,
-.read-more,
-.tech-tag,
-.skill-tag {
-  transition: all 0.2s ease-in-out;
+@media (max-width: 48em) {
+  .masthead-title {
+    text-align: center;
+  }
+  .masthead-title small {
+    display: none;
+  }
 }
 
+
+/*
+ * Sidebar
+ *
+ * The sidebar is the drawer, the item we are toggling.
+ */
+
+/* Style and "hide" the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 14rem;
+  visibility: hidden;
+  overflow-y: auto;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875rem; /* 15px */
+  color: var(--off-white);
+  background-color: var(--black-bean);
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+@media (min-width: 30em) {
+  .sidebar {
+    font-size: .75rem; /* 14px */
+  }
+}
+
+/* Sidebar content */
+.sidebar a {
+  font-weight: normal;
+  color: var(--white);
+  text-decoration: none;
+}
+.sidebar-item {
+  padding: 1rem;
+}
+.sidebar-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  border-bottom: 1px solid var(--blood-red);
+}
+.sidebar-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+  border-top: 1px solid var(--blood-red);
+}
+.sidebar-nav-item.active,
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: none;
+  background-color: var(--blood-red);
+  border-color: transparent;
+}
+
+@media (min-width: 48em) {
+  .sidebar-item {
+    padding: 1.5rem;
+  }
+  .sidebar-nav-item {
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-checkbox {
+  position: absolute;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-toggle {
+  position: absolute;
+  top:  .8rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  padding: .25rem .75rem;
+  background-color: transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+.sidebar-toggle::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  content: "";
+  /* Dark Mode Change: Icon is now white to show up on dark background */
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23f1f1f1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
+}
+
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: var(--engineering-orange);
+}
+
+.sidebar-toggle:active:before,
+#sidebar-checkbox:focus ~ .sidebar-toggle::before,
+#sidebar-checkbox:checked ~ .sidebar-toggle::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
+}
+
+@media (min-width: 30.1em) {
+  .sidebar-toggle {
+    position: fixed;
+  }
+}
+
+@media print {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content.
+ */
+
+.wrap,
+.sidebar,
+.sidebar-toggle {
+  -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrap,
+.sidebar-toggle {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
+}
+
+#sidebar-checkbox:checked + .sidebar {
+  z-index: 10;
+  visibility: visible;
+}
+#sidebar-checkbox:checked ~ .sidebar,
+#sidebar-checkbox:checked ~ .wrap,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+
+
+/*
+ * Posts and pages
+ */
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title {
+  margin-top: 0;
+  color: var(--white);
+}
+.post-title a {
+  color: var(--white);
+}
+.post-title a:hover, .post-title a:focus {
+    color: var(--engineering-orange);
+}
+
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: var(--subtle-gray);
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: var(--subtle-gray);
+}
+.related-posts li a:hover,
+.related-posts li a:hover small {
+  color: var(--engineering-orange);
+}
+
+
+/*
+ * Pagination
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  color: var(--off-white);
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  background-color: var(--blood-red);
+  color: var(--white);
+}
+
+@media (min-width: 30em) {
+  .pagination {
+    margin: 3rem 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page.
+ */
+
+.layout-reverse .sidebar {
+  left: auto;
+  right: -14rem;
+}
+.layout-reverse .sidebar-toggle {
+  left: auto;
+  right: 1rem;
+}
+
+.layout-reverse #sidebar-checkbox:checked ~ .sidebar,
+.layout-reverse #sidebar-checkbox:checked ~ .wrap,
+.layout-reverse #sidebar-checkbox:checked ~ .sidebar-toggle {
+  -webkit-transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+          transform: translateX(-14rem);
+}
+
+
+/*
+ * Overlay sidebar
+ *
+ * Make the sidebar content overlay the viewport content.
+ */
+
+.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  /* Dark Mode Change: Shadow is now against a dark background */
+  box-shadow: 0 0 0 .25rem var(--smoky-black);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+}
+
+/* Only one tweak for a reverse layout */
+.layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+}

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # GitHub Pages
 gem 'github-pages'
+gem 'jekyll'
 
 # Jekyll plugins
 gem 'jekyll-paginate'
@@ -12,6 +13,7 @@ gem 'jekyll-sitemap'
 gem 'jekyll-feed'
 gem 'jekyll-gist'
 gem 'erb'
+gem 'csv'
 
 # Server
 gem "webrick", "~> 1.8"
