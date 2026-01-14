@@ -10,11 +10,16 @@ I am a Backend Developer specializing in robust, secure, and scalable systems. W
 
 ## Work Experience
 
-**PRESIDIO, Chennai, India**  
-**Software Engineer** (Sep 2024 - Present)
-* Working exclusively with AWS cloud infrastructure and IaC tools to architect robust solutions for microservices and data-intensive applications
-* Implementing migration strategies using AWS MGN for enterprise workloads
-* Contributing to application development with ASP.NET Core and React for client-facing projects
+**Honda R&D India Pvt Ltd as contractor via awign, Gurgaon, India**
+**AI Specialist** (Nov 2025 - Present)
+* Designed and deployed sophisticated Retrieval-Augmented Generation (RAG) architectures using Azure AI Foundry, integrating GPT-5.2 and Claude 4.5 Opus to handle complex industry-specific queries
+* Developed high-accuracy document intelligence systems by implementing Mistral OCR and top open-weight models, streamlining data extraction
+
+**PRESIDIO, Chennai, India**
+**Software Engineer** (Jun 2024 - Oct 2025)
+* Worked on AWS to set up and architect better infrastructure for microservice & data intensive applications. Developed AI agents to automate migration tasks via fine-tuning & embeddings
+* Developed Python automation to enhance observability for AWS MGN migrations and cutover monitoring
+* Built tools in .NET, React, and Python to improve internal workflows and deployment automation
 * Learned: Advanced AWS resource optimization, IaC best practices, efficient cloud migration strategies
 
 **FOURKITES, Chennai, India**  
